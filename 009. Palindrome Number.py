@@ -38,4 +38,5 @@ if __name__ == "__main__":
 
     # Calling the isPalindrome function and printing the result
     ans = sol.isPalindrome(x)
+
     print(ans)
