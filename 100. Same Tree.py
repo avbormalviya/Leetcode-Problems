@@ -18,21 +18,24 @@ class TreeNode:
 
 
 class Solution:
-    def isSameTree(self, p, q):
-        if not p or not q:
-            return p == q
+    def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
+        # If both nodes are None, they are the same
+        if not p and not q:
+            return True
 
-        return p.val == q.val and self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+        # If only one is None or values don't match, trees are different
+        if not p or not q or p.val != q.val:
+            return False
+
+        # Recursively check left and right subtrees
+        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
 
 
+# Sample Test Case
 if __name__ == "__main__":
-    p = TreeNode(1)
-    p.left = TreeNode(2)
-    p.right = TreeNode(3)
-
-    q = TreeNode(1)
-    q.left = TreeNode(2)
-    q.right = TreeNode(3)
+    # Creating two identical trees
+    p = TreeNode(1, TreeNode(2), TreeNode(3))
+    q = TreeNode(1, TreeNode(2), TreeNode(3))
 
     solution = Solution()
-    print(solution.isSameTree(p, q))
+    print(solution.isSameTree(p, q))  # Output: True
