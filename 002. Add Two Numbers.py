@@ -59,11 +59,11 @@ class Solution:
             total = carry  # Start with carry from the previous addition
 
             if l1:
-                total += l1.val  # Add l1's current node value
+                total += l1.val  # Add l1'scratch_KNN.py current node value
                 l1 = l1.next  # Move to the next node
 
             if l2:
-                total += l2.val  # Add l2's current node value
+                total += l2.val  # Add l2'scratch_KNN.py current node value
                 l2 = l2.next  # Move to the next node
 
             carry = total // 10  # Compute carry for next iteration

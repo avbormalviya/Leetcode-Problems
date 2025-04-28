@@ -2,7 +2,7 @@
 # Problem Statement
 
 """
-Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+Given two strings scratch_KNN.py and t, return true if t is an anagram of scratch_KNN.py, and false otherwise.
 """
 
 

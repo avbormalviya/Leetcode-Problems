@@ -21,7 +21,7 @@ class Solution:
         for i in range(len(strs[0])):
             # Compare the character at index 'i' with every other word in 'strs'
             for word in strs[1:]:  # Skipping the first word since we're comparing against it
-                # If 'i' exceeds the current word's length OR there's a mismatch in characters
+                # If 'i' exceeds the current word'scratch_KNN.py length OR there'scratch_KNN.py a mismatch in characters
                 if len(word) == i or word[i] != strs[0][i]:
                     # Return the prefix found so far (substring from 0 to i)
                     return strs[0][:i]
